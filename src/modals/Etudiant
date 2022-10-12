@@ -1,0 +1,73 @@
+function App() {
+  
+    let etudiant = [{
+     nom : "hicham",
+     prenom : "mayat",
+     image : '404.png',
+     success : false},
+     {
+       nom : "imane",
+       prenom : "imane",
+       image : 'logo192.png',
+       success : true
+     },
+     {
+      nom : "zakaria",
+      prenom : "zakaria",
+      image : '404.png',
+      success : true},
+      {
+        nom : "imane",
+        prenom : "imane",
+        image : 'logo192.png',
+        success : true
+      },
+      {
+       nom : "zakaria",
+       prenom : "zakaria",
+       image : '404.png',
+       success : true},
+       {
+        nom : "zakaria",
+        prenom : "zakaria",
+        image : '404.png',
+        success : true},
+   
+   ]
+   const showName = (nom,prenom) =>{
+    window.alert(nom+" "+prenom)
+   }
+   
+   
+   return (
+  <>
+    <Count/>
+    
+    
+  
+  {etudiant.map(element =>(
+
+  <div className="container">
+    <div className="card">
+      <div className='top-card'>
+        <img src='logo192.png'></img>
+      </div>
+      <div className='info-card'>
+        <h2>{element.nom} {element.prenom}</h2>
+        <h3>{element.success ? "admis" : "non admis"} </h3>
+      </div>
+      <div className='button-card'>
+        <button onClick={()=>showName(element.nom,element.prenom)}>show</button>
+      </div>
+    </div>
+  </div>
+
+  ))
+  }
+  </>
+   )
+
+  }
+  
+
+export default App;
