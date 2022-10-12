@@ -4,7 +4,7 @@ import Count from "./component/count"
 
 function App() {
   
-  let etudiant = [{
+  let profile = [{
    nom : "hicham",
    prenom : "mayat",
    image : '',
@@ -23,7 +23,7 @@ function App() {
   
   
 
-{etudiant.map(element =>(
+{profile.map(element =>(
 
 <div className="container">
   <div className="card">
